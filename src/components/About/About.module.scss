@@ -1,0 +1,82 @@
+//.banner {
+//  height: 150%;
+//  aspect-ratio: 1/1;
+//
+//
+//}
+//
+//.parallaxChildren {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//  display: flex;
+//  flex-flow: column wrap;
+//  align-items: center;
+//  justify-content: center;
+//  color: white;
+//
+//
+//  h1 {
+//    color: white;
+//    font-size: 4vw;
+//    font-weight: normal;
+//  }
+//}
+
+.headline {
+  font-size: 10vw;
+}
+
+.inset {
+  position: absolute;
+  inset: 0;
+}
+
+.white {
+  color: white;
+}
+
+.gray {
+  color: #446;
+}
+
+.full {
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient {
+  background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, black);
+}
+
+.wrap {
+  flex-direction: column;
+  background: linear-gradient(-140deg, #ff65c5, #fa909d, #fcce6c);
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 2;
+  font-size: 10vw;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 50px;
+  padding-left: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 4vh;
+  font-style: italic;
+}

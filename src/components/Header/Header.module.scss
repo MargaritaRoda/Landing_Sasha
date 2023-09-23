@@ -1,0 +1,42 @@
+@use 'src/global' as *;
+
+.headerWrapper {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  //padding: 20px;
+  max-width: 100%;
+  background-color: var(--general-blue);
+}
+
+.headerNav {
+  display: flex;
+
+  justify-content: space-between;
+  flex: 1;
+  height: 64px;
+  max-width: 1232px;
+  @include medium() {
+    height: 56px;
+  }
+}
+
+.btnNav {
+  border: 0;
+  flex: 1;
+  font-size: 24px;
+  color: var(--reserved);
+  background-color: var(--general-blue);
+  transition: background-color 200ms 10ms ease-out;
+  height: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--main-color);
+    color: var(--general-blue);
+  }
+
+  @include small() {
+    font-size: 18px;
+  }
+}

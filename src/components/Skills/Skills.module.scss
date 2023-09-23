@@ -1,0 +1,53 @@
+@use 'src/global' as *;
+
+.skills {
+  height: fit-content;
+}
+.skillsWrap {
+  display: inline-flex;
+  justify-content: center;
+  gap: 24px;
+  width: 80%;
+  @include medium() {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+//.skillsItem {
+//  display: flex;
+//  flex-direction: column;
+//  padding: 20px 50px 15px 50px;
+//  margin-top: 100px;
+//  margin-bottom: 100px;
+//  gap: 25px;
+//  flex-basis: 30%;
+//  border: 0;
+//  border-radius: 24px;
+//  background-color: #ffffff;
+//  @include medium() {
+//    font-size: 12px;
+//    padding: 15px 40px 10px 40px;
+//    margin-top: 50px;
+//    margin-bottom: 50px;
+//  }
+//}
+//
+//.skillsDescription {
+//  overflow: hidden;
+//  text-overflow: ellipsis;
+//  height: 280px;
+//  background: -webkit-linear-gradient( rgba(87,85,86,1), rgba(87,85,86,1), rgba(87,85,86,1), rgba(255,255,255,1));
+//  -webkit-background-clip: text;
+//  -webkit-text-fill-color: transparent;
+//  @include medium() {
+//    font-size: 12px;
+//  }
+//}
+//
+//.skillsDescriptionShort {
+//  height: 100%;
+//  background: (rgba(87,85,86,1));
+//  -webkit-background-clip: text;
+//  -webkit-text-fill-color: transparent;
+//}
