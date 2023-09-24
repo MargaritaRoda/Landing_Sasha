@@ -1,0 +1,15 @@
+@use '../../global' as *;
+
+.skills {
+  height: fit-content;
+}
+.skillsWrap {
+  display: inline-flex;
+  justify-content: center;
+  gap: 24px;
+  width: 80%;
+  @include medium() {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

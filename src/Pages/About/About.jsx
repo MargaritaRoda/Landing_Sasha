@@ -1,9 +1,9 @@
 import React from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
-import { FrontArticle } from '../FrontArticle';
+import { FrontArticle } from '../../components/FrontArticle';
 import { aboutInfoEn } from '../../lib/info';
-import { UnderlayPage } from '../UnderlayPage';
-import { AboutItem } from '../AboutItem';
+import { UnderlayPage } from '../../components/UnderlayPage';
+import { AboutItem } from '../../components/AboutItem';
 
 export const About = () => {
   return (

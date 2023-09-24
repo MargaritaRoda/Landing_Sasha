@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Skills.module.scss';
-import { UnderlayPage } from '../UnderlayPage';
-import { SkillsItem } from '../SkillsItem';
+import { UnderlayPage } from '../../components/UnderlayPage';
+import { SkillsItem } from '../../components/SkillsItem';
 import { skills } from '../../lib/info';
 
 export const Skills = () => {

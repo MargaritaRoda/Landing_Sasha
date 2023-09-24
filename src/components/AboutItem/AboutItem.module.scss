@@ -1,7 +1,7 @@
 @use 'src/global' as *;
 .wrapper {
   display: flex;
-  justify-content: center;
+  text-align: center;
 }
 .root {
   animation: anim 2s;
