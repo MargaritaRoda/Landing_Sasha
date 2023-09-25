@@ -3,6 +3,7 @@ import styles from './Skills.module.scss';
 import { UnderlayPage } from '../../components/UnderlayPage';
 import { SkillsItem } from '../../components/SkillsItem';
 import { skills } from '../../lib/info';
+import { Scroll } from '../../components/Scroll';
 
 export const Skills = () => {
   return (
@@ -21,6 +22,7 @@ export const Skills = () => {
           description={skills.description[2]}
         />
       </div>
+      <Scroll />
     </UnderlayPage>
   );
 };
