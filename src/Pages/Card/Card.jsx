@@ -26,7 +26,7 @@ export const Card = () => {
     }
   };
   return (
-    <UnderlayPage>
+    <UnderlayPage className={styles.cardWrap}>
       <div className={styles.card}>
         <img src={sashaPhoto} alt="Sasha" className={styles.img} />
         <div>
