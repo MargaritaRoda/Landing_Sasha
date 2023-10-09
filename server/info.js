@@ -1,10 +1,10 @@
-export const frontArticleRu = {
+const frontArticleRu = {
   titleText: 'Движение - жизнь',
   name: 'Щербо Александра Михайловна',
   text: 'врач высшей категории и большая молодец',
 };
 
-export const cardInfo = {
+const cardInfo = {
   name: 'Щербо Александра',
   subName: 'Врач 1й категории',
   description: [
@@ -14,7 +14,7 @@ export const cardInfo = {
   ],
 };
 
-export const aboutInfo = {
+const aboutInfo = {
   title: {
     way: 'Some words about and my professional journey...',
     education: 'Education',
@@ -38,7 +38,7 @@ export const aboutInfo = {
   },
 };
 
-export const skills = {
+const skills = {
   title: {
     diagnostics: 'Диагностика',
     injection: 'Внутрисуставные иньекции',
@@ -90,4 +90,10 @@ const finalLanguage = {
     aboutInfo,
     skills,
   },
+};
+
+module.exports = {
+  cardInfo,
+  aboutInfo,
+  skills,
 };

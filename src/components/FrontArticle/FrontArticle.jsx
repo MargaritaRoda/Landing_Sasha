@@ -3,8 +3,6 @@ import styles from './FrontArticle.module.scss';
 import classNames from 'classnames';
 import { UnderlayPage } from '../UnderlayPage';
 
-const PUBLIC_PATH = process.env.PUBLIC_URL;
-
 export const FrontArticle = ({ title, descriptionText, className }) => {
   return (
     <UnderlayPage>

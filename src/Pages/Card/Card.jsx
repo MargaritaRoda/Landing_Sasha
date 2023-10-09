@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import styles from './Card.module.scss';
 import { Button } from '../../components/Button';
 import { UnderlayPage } from '../../components/UnderlayPage';
 import { useNavigate } from 'react-router-dom';
 import { navigation } from '../../lib/constants';
+// import {cardInfo} from "../../../server/info";
+import { getCardData } from '../../lib/API';
 
 const PUBLIC_PATH = process.env.PUBLIC_URL;
 
 const sashaPhoto = `${PUBLIC_PATH}/assets/images/sasha.jpeg`;
 
 export const Card = () => {
+  const [cardInfo, setCardInfo] = useState();
+  useEffect(() => {
+    getCardData().then((data) => {
+      setCardInfo(data);
+    });
+  }, [setCardInfo]);
+
   const navigate = useNavigate();
   const handleGo = (event) => {
     event.preventDefault();
@@ -25,26 +34,22 @@ export const Card = () => {
       }
     }
   };
-  return (
+  return cardInfo !== undefined ? (
     <UnderlayPage className={styles.cardWrap}>
       <div className={styles.card}>
         <img src={sashaPhoto} alt="Sasha" className={styles.img} />
         <div>
-          <h2>Sasha</h2>
-          <h3>Врач 1й категории</h3>
+          <h2>{cardInfo.name}</h2>
+          <h3>{cardInfo.subName}</h3>
           <ul className={styles.status}>
-            <li>
-              <var>1200</var>
-              <label>Patients</label>
-            </li>
-            <li>
-              <var>3</var>
-              <label>Methods</label>
-            </li>
-            <li>
-              <var>100</var>
-              <label>Save lives</label>
-            </li>
+            {cardInfo.description?.map(({ num, title }, index) => (
+              <Fragment key={index}>
+                <li>
+                  <var>{num}</var>
+                  <label>{title}</label>
+                </li>
+              </Fragment>
+            ))}
           </ul>
           <nav className={styles.buttons}>
             {navigation.map((text, index) =>
@@ -62,5 +67,7 @@ export const Card = () => {
         </div>
       </div>
     </UnderlayPage>
+  ) : (
+    <div>Loading</div>
   );
 };

@@ -4,7 +4,7 @@ import { Container } from '../../components/TitlePageAbout';
 import { Header } from '../../components/Header';
 import { PageContainer } from '../../components/PageContainer';
 import { FrontArticle } from '../../components/FrontArticle';
-import { frontArticleRu } from '../../lib/info';
+import { frontArticleRu } from '../../../server/info';
 import classNames from 'classnames';
 
 export const IndexPage = () => {
