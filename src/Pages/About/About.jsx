@@ -4,9 +4,14 @@ import { FrontArticle } from '../../components/FrontArticle';
 import { AboutItem } from '../../components/AboutItem';
 import { Scroll } from '../../components/Scroll';
 import { useGetAboutInfoQuery } from '../../store/slicers/apiSlice';
+import { useSelector } from 'react-redux';
+import { languageSelector } from '../../store/selectors/lang.selector';
 
 export const About = () => {
-  const { data: aboutInfo } = useGetAboutInfoQuery();
+  const langCurr = useSelector(languageSelector);
+  const lang = langCurr.textLang;
+
+  const { data: aboutInfo } = useGetAboutInfoQuery({ lang });
 
   return aboutInfo ? (
     <>

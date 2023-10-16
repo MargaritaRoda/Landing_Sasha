@@ -1,12 +1,15 @@
-const frontArticleRu = {
-  titleText: 'Движение - жизнь',
-  name: 'Щербо Александра Михайловна',
-  text: 'врач высшей категории и большая молодец',
-};
-
 const cardInfo = {
   name: 'Щербо Александра',
   subName: 'Врач 1й категории',
+  description: [
+    { num: '1200', title: 'Patients' },
+    { num: '3', title: 'Methods' },
+    { num: '1000', title: 'Save lives' },
+  ],
+};
+const cardInfoEn = {
+  name: 'Scherbo Alyaksandra',
+  subName: '1st degree doctor',
   description: [
     { num: '1200', title: 'Patients' },
     { num: '3', title: 'Methods' },
@@ -81,19 +84,78 @@ const skills = {
   },
 };
 
-const finalLanguage = {
-  Ru: {
-    aboutInfo,
-    skills,
+const aboutInfoEn = {
+  title: {
+    way: 'Some words about and my professional journey...',
+    education: 'Education',
+    professional: 'Professional journey',
   },
-  En: {
-    aboutInfo,
-    skills,
+  descriptionText: {
+    education:
+      'From 1979 to 1980 he was a clinical resident of the Department of Cardiology and Functional Diagnostics of the Belarusian Institute of Advanced Training of Physicians. n' +
+      'From 1980 to 1983 he was a postgraduate student of the Cardiology Department of BelGIUV. n' +
+      'From 1983 to 1993 she worked as an assistant. From 1993 to 2002 she was assistant professor of cardiology. n' +
+      'From 1999 to 2002. Head of the course of rheumatology at the Cardiology Department of BelMAPO. n' +
+      'Since 2002, after the reorganization of the department, she was transferred to the position of professor of the Department of Cardiology and Rheumatology of BelMAPO',
+
+    professional:
+      'Main areas of scientific activity: the study of cell and neuro-humoral mechanisms of athero-thrombogenesis,' +
+      ' psychophysiological and neuro-moral disorders in cardiological and rheumatic diseases. ' +
+      'Author of 230 scientific papers, methodical documents and manuals on cardiology and rheumatology diseases,' +
+      'Author and co-author of 4 monographs: «Diagnostics of cardiological diseases» (1990), «Practical cardiology» (1997), ' +
+      '«Nonronogenic myocardial diseases. Infectious endocarditis» (2004), «Clinical cardiology» (2007). ' +
+      'Under her guidance, 7 candidate dissertations are defended, 1 dissertation is performed',
+  },
+};
+
+const skillsEn = {
+  title: {
+    diagnostics: 'Diagnosis',
+    injection: 'Intra-articular injections',
+    joints: 'Joint ultrasound',
+  },
+  description: {
+    diagnostics:
+      'In case of joints, spine, muscles with swollen joints and reduced mobility in joints with morning stiffness in joints n' +
+      'unmotivated weight loss, skin rashes and mucous membranes not associated with infectious diseases n' +
+      'with the temperature rising, the general weakness.',
+    injection:
+      'Hyaluronic acid injections are a new solution in the treatment of osteoarthrosis that has already proven to be n' +
+      'Hyaluronic acid and chondroitin sulfate are natural components of cartilage. Hyaluronic n' +
+      ' acid is also found in synovial fluid, which «lubricates» articular surfaces n' +
+      ' bones, reducing their friction. Insufficient formation of hyaluronic acid and chondroitin n' +
+      ' {  sulfate in the body leads to thinning of the cartilage and its rapid wear and tear. The first signs of a joint malfunction are symptoms of osteoarthrosis: joint pain, change of n' +
+      '  ¹  its shape and inability to perform joint movements as before. They appear against n' +
+      'no   aging of the organism or are caused by joint trauma. n' +
+      ' n' +
+      'Traditional osteoarthrosis treatment is anti-inflammatory and analgesic drugs for n' +
+      '< Elimination of inflammatory process, preparations of hyaluronic acid and chondroitin sulfate in n' +
+      'ë   the form of capsules and tablets for strengthening articular cartilage, preventing its rapid wear. n' +
+      ' n' +
+      'ː  Hyaluronic acid injections are a new solution in the treatment of osteoarthrosis that has already proven its n' +
+      'ː  efficiency and demand. n' +
+      ' n' +
+      ' WHO experts recommend hyaluronic acid injection to patients with mild and moderate n' +
+      'no   by the pronounced manifestations of osteoarthrosis. Hyaluronic acid can be injected into any joint, n' +
+      'allowed simultaneous administration of the drug in several joints.',
+    joints:
+      'Research is being done ' +
+      'in a horizontal position. As in any other ultrasonic examination on the studied area applied contact gel, ' +
+      'and then apply and move the ultrasonic sensor to display the necessary information on the screen.  n' +
+      ' n' +
+      'After the research, the specialist draws up a protocol of the study, where the results are entered in detail,' +
+      ' and forms the conclusion. On the basis of this conclusion, the attending doctor clarifies the diagnosis and selects the therapy. ' +
+      'If necessary, the patient may be referred for additional joint examinations (X-rays, arthrography, ' +
+      'computer or magnetic resonance imaging) or consultation with highly specialized doctors. Duration' +
+      'diagnostics are 15-20 minutes, depending on the size of the examination (one or two joints) and the observed deviations from the norms.',
   },
 };
 
 module.exports = {
   cardInfo,
+  cardInfoEn,
   aboutInfo,
   skills,
+  aboutInfoEn,
+  skillsEn,
 };

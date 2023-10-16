@@ -7,10 +7,16 @@ export const apiSlice = createApi({
   }),
   endpoints: (builder) => ({
     getAboutInfo: builder.query({
-      query: () => '/about',
+      query: ({ lang }) => {
+        const searchParams = new URLSearchParams({ lang });
+        return `/about/lang?${searchParams.toString().toLowerCase()}`;
+      },
     }),
     getSkills: builder.query({
-      query: () => '/skills',
+      query: ({ lang }) => {
+        const searchParams = new URLSearchParams({ lang });
+        return `/skills/lang?${searchParams.toString().toLowerCase()}`;
+      },
     }),
   }),
 });

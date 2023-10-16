@@ -2,12 +2,17 @@ import React from 'react';
 import styles from './Skills.module.scss';
 import { UnderlayPage } from '../../components/UnderlayPage';
 import { SkillsItem } from '../../components/SkillsItem';
-import { skills } from '../../../server/info';
 import { Scroll } from '../../components/Scroll';
 import { useGetSkillsQuery } from '../../store/slicers/apiSlice';
+import { useSelector } from 'react-redux';
+import { languageSelector } from '../../store/selectors/lang.selector';
 
 export const Skills = () => {
-  const { data: skills } = useGetSkillsQuery();
+  const langCurr = useSelector(languageSelector);
+
+  const lang = langCurr.textLang;
+  const { data: skills } = useGetSkillsQuery({ lang });
+
   return skills ? (
     <UnderlayPage className={styles.skills}>
       <div className={styles.skillsWrap}>

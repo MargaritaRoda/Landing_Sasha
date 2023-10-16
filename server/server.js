@@ -1,34 +1,40 @@
 const express = require('express');
-const { cardInfo, aboutInfo, skills } = require('./info.js');
+const {
+  cardInfo,
+  aboutInfo,
+  aboutInfoEn,
+  skills,
+  skillsEn,
+} = require('./info.js');
 const cors = require('cors');
+const { cardInfoEn } = require('./info');
 
 const app = express();
 app.use(cors());
 
-// const productRouter = express.Router;
-
-app.get('/', function (req, res) {
-  res.send(cardInfo);
+app.get('/:lang', function (req, res) {
+  if (req.query.lang === 'ru' || req.query.lang !== 'en') {
+    res.send(cardInfo);
+  } else {
+    res.send(cardInfoEn);
+  }
 });
 
-app.get('/about', function (req, res) {
-  res.send(aboutInfo);
-});
-app.get('/skills', function (req, res) {
-  res.send(skills);
+app.get('/about/:lang', (req, res) => {
+  if (req.query.lang === 'ru' || req.query.lang !== 'en') {
+    res.send(aboutInfo);
+  } else {
+    res.send(aboutInfoEn);
+  }
 });
 
-// productRouter.use('/About-me', function (req, res) {
-//     res.send('About me');
-// });
-// productRouter.use('/Methods', function (req, res) {
-//     res.send('Methods');
-// });
-//
-// app.use('/', productRouter);
-// app.get('/', function (req, res) {
-//     return res.send();
-// })
+app.get('/skills/:lang', function (req, res) {
+  if (req.query.lang === 'ru' || req.query.lang !== 'en') {
+    res.send(skills);
+  } else {
+    res.send(skillsEn);
+  }
+});
 
 app.listen(3000, function () {
   console.log('api app started');

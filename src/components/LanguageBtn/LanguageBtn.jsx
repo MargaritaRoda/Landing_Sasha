@@ -7,7 +7,7 @@ import { switchLang } from '../../store/slicers/lang.slicer';
 import classNames from 'classnames';
 import { languageSelector } from '../../store/selectors/lang.selector';
 
-export const LanguageBtn = () => {
+export const LanguageBtn = ({ className }) => {
   const dispatch = useDispatch();
   const selectLang = useSelector(languageSelector);
 
@@ -16,7 +16,7 @@ export const LanguageBtn = () => {
   };
 
   return (
-    <div className={styles.wrap}>
+    <div className={classNames(styles.wrap, className)}>
       {language.map(({ textLang, locale }, index) => (
         <Button
           children={textLang}

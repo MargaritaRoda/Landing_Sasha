@@ -12,3 +12,23 @@ $medium-width: 850px;
     @content;
   }
 }
+
+$bigCard-width: 950px;
+$mediumCard-width: 650px;
+$smallCard-width: 480px;
+
+@mixin bigCard() {
+  @media (max-width: $bigCard-width) {
+    @content;
+  }
+}
+@mixin mediumCard() {
+  @media (max-width: $mediumCard-width) {
+    @content;
+  }
+}
+@mixin smallCard() {
+  @media (max-width: $smallCard-width) {
+    @content;
+  }
+}

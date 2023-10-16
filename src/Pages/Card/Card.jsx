@@ -6,18 +6,23 @@ import { useNavigate } from 'react-router-dom';
 import { navigation } from '../../lib/constants';
 // import {cardInfo} from "../../../server/info";
 import { getCardData } from '../../lib/API';
+import { useSelector } from 'react-redux';
+import { languageSelector } from '../../store/selectors/lang.selector';
 
 const PUBLIC_PATH = process.env.PUBLIC_URL;
 
 const sashaPhoto = `${PUBLIC_PATH}/assets/images/sasha.jpeg`;
 
 export const Card = () => {
+  const langCurr = useSelector(languageSelector);
+  const lang = langCurr.textLang.toLowerCase();
+
   const [cardInfo, setCardInfo] = useState();
   useEffect(() => {
-    getCardData().then((data) => {
+    getCardData(lang).then((data) => {
       setCardInfo(data);
     });
-  }, [setCardInfo]);
+  }, [setCardInfo, lang]);
 
   const navigate = useNavigate();
   const handleGo = (event) => {
@@ -34,7 +39,7 @@ export const Card = () => {
       }
     }
   };
-  return cardInfo !== undefined ? (
+  return cardInfo ? (
     <UnderlayPage className={styles.cardWrap}>
       <div className={styles.card}>
         <img src={sashaPhoto} alt="Sasha" className={styles.img} />
