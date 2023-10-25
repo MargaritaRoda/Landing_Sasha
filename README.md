@@ -5,3 +5,5 @@ Information is available in 2 languages that user can choose.
 The source language of the application is defined as the most commonly used by the user.
 Client-side 've been created using JavaScript/React/Redux. 
 As server Express.js have been used.
+
+![indexPage](https://raw.githubusercontent.com/MargaritaRoda/Landing_Sasha/blob/main/IndexPage.png)
