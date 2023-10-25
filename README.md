@@ -6,4 +6,8 @@ The source language of the application is defined as the most commonly used by t
 Client-side 've been created using JavaScript/React/Redux. 
 As server Express.js have been used.
 
-![indexPage](https://raw.githubusercontent.com/MargaritaRoda/Landing_Sasha/blob/main/IndexPage.png)
+![IndexPage](https://raw.githubusercontent.com/MargaritaRoda/Landing_Sasha/main/blob/IndexPage.png)
+
+![AboutPage](https://raw.githubusercontent.com/MargaritaRoda/Landing_Sasha/main/blob/AboutPage.png)
+
+![MethodsPage](https://raw.githubusercontent.com/MargaritaRoda/Landing_Sasha/main/blob/MethodsPage.png)
